@@ -1,49 +1,49 @@
 #!/bin/bash
 zip -r ../360ControllerSource.zip *
 cd Feedback360
-xcodebuild -configuration Release
+xcodebuild -arch x86_64 -configuration Release
 if [ $? -ne 0 ]
   then
     echo "******** BUILD FAILED ********"
     exit 1
 fi
 cd ../DriverTool
-xcodebuild -configuration Release
+xcodebuild -arch x86_64 -configuration Release
 if [ $? -ne 0 ]
   then
     echo "******** BUILD FAILED ********"
     exit 1
 fi
 cd ../360Controller
-xcodebuild -configuration Release
+xcodebuild -arch x86_64 -configuration Release
 if [ $? -ne 0 ]
   then
     echo "******** BUILD FAILED ********"
     exit 1
 fi
 cd ../360Daemon
-xcodebuild -configuration Release
+xcodebuild -arch x86_64 -configuration Release
 if [ $? -ne 0 ]
   then
     echo "******** BUILD FAILED ********"
     exit 1
 fi
 cd ../WirelessGamingReceiver
-xcodebuild -configuration Release
+xcodebuild -arch x86_64 -configuration Release
 if [ $? -ne 0 ]
   then
     echo "******** BUILD FAILED ********"
     exit 1
 fi
 cd ../Wireless360Controller
-xcodebuild -configuration Release
+xcodebuild -arch x86_64 -configuration Release
 if [ $? -ne 0 ]
   then
     echo "******** BUILD FAILED ********"
     exit 1
 fi
 cd ../Pref360Control
-xcodebuild -configuration Release 
+xcodebuild -arch x86_64 -configuration Release 
 if [ $? -ne 0 ]
   then
     echo "******** BUILD FAILED ********"
